@@ -20,6 +20,8 @@ class CurlRequest
     private $parameters =  Array();
     private $curl;
     private $params;
+    private $response = null;
+    private $code = null;
 
     public function __construct()
     {
@@ -97,6 +99,20 @@ class CurlRequest
 
         curl_close($this->curl);
 
+        $this->response = $response;
+        $this->code = $code;
+
         return array("code" => ''.$code.'', "body" => $response);
     }
+
+    public function response()
+    {
+        return $this->response;
+    }
+
+    public function code()
+    {
+        return $this->code;
+    }
+
 }
