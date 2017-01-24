@@ -7,8 +7,8 @@
     "email" : "marcos.deskti@gmail.com"
   },
   "require": {
-    "php": ">=7.0",
-    "laravel/framework": "~5.0"
+    "php": ">=6.0",
+    "laravel/framework": ">=5.0"
   },
   "autoload": {
     "psr-4": {
